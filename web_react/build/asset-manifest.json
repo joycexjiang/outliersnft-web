@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/outliersnft-web/static/css/main.c6249a16.chunk.css",
-    "main.js": "/outliersnft-web/static/js/main.b998bd27.chunk.js",
-    "main.js.map": "/outliersnft-web/static/js/main.b998bd27.chunk.js.map",
+    "main.js": "/outliersnft-web/static/js/main.8e83f9da.chunk.js",
+    "main.js.map": "/outliersnft-web/static/js/main.8e83f9da.chunk.js.map",
     "runtime-main.js": "/outliersnft-web/static/js/runtime-main.762b72cb.js",
     "runtime-main.js.map": "/outliersnft-web/static/js/runtime-main.762b72cb.js.map",
     "static/js/2.9345569d.chunk.js": "/outliersnft-web/static/js/2.9345569d.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.762b72cb.js",
     "static/js/2.9345569d.chunk.js",
     "static/css/main.c6249a16.chunk.css",
-    "static/js/main.b998bd27.chunk.js"
+    "static/js/main.8e83f9da.chunk.js"
   ]
 }
