@@ -10,12 +10,11 @@ import './styles/fonts/TupacMagrath.woff';
 // Constants
 const TWITTER_HANDLE = 'joycebydsgn';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-const OPENSEA_LINK = '';
-const TOTAL_MINT_COUNT = 50;
 
 const App = () => {
   /* state variable we use to store our user's public wallet after importing useState*/
   const [currentAccount, setCurrentAccount] = useState("");
+  const [statusUpdate, setstatusUpdate]= useState("");
 
   /*making sure this is async*/
 
@@ -40,9 +39,11 @@ const App = () => {
     if (accounts.length !== 0) {
       const account = accounts[0];
       console.log("Found an authorized account:", account);
+      setstatusUpdate("Found an authorized account, go ahead and mint!");
       setCurrentAccount(account);
       } else {
         console.log("No authorized account found");
+        setstatusUpdate("No authorized account found");
       }
     }
   
@@ -53,24 +54,26 @@ const App = () => {
       const { ethereum } = window;
 
       if(!ethereum){
-        alert("get MetaMask pls:)");
+        setstatusUpdate("get MetaMask pls");
         return;
       }else{
-        alert("found MetaMask wallet. connecting ..");
+        setstatusUpdate("found MetaMask wallet. connecting ..");
       }
 
       /*method to request access to account */
       const accounts = await ethereum.request({method:"eth_requestAccounts"});
 
       /*prints out public address once we authorize metamask */
-      console.log("Connected", accounts[0]);
+      setstatusUpdate("Connected", accounts[0]);
       setCurrentAccount(accounts[0]);
     } catch (error){
-        console.log(error);
+        setstatusUpdate("There was an error.")
+        // setstatusUpdate(error.toString())
+        console.log(error())
     }
   }
 
-  //call makeanEpicNFT function from our web app
+  //call make nft function from our web app
   const askContractToMintNft = async () => {
     const CONTRACT_ADDRESS = "0xBb514353b0665BC096399c2D9133c8bEdC6a7d7a";
   
@@ -86,21 +89,26 @@ const App = () => {
         // this line creates the connection to our contract
         //contract's address -> abi file
         
-        console.log("Going to pop wallet now to pay gas...")
+        setstatusUpdate("Going to pop wallet now to pay gas...")
         let nftTxn = await connectedContract.mint();
+
+        // ask connected contract the same in etherscan, query has role can do that here, use that to check/disable the button, pop up message
+        //disable button -> ethers connection to check whether to render the button
   
-        console.log("Mining... please wait.")
+        setstatusUpdate("Mining... please wait.")
         await nftTxn.wait();
         
-        console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+        setstatusUpdate(`You've mined your NFT! see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
 
         {seeTransaction()}
 
       } else {
-        console.log("Ethereum object doesn't exist!");
+        setstatusUpdate("Ethereum object doesn't exist!");
       }
     } catch (error) {
-      console.log(error)
+      setstatusUpdate("There was an error.")
+      // setstatusUpdate(error.toString())
+      console.log(error())
     }
   }
 
@@ -110,6 +118,9 @@ const App = () => {
   }, [])
 
     // Render Methods
+
+
+   //connect wallet button 
   const renderNotConnectedContainer = () => (
     <button onClick={connectWallet} className="cta-button connect-wallet-button">
       connect wallet
@@ -129,6 +140,7 @@ const App = () => {
     </p>
   )
 
+  
   return (
     
     <div className="App">
@@ -136,30 +148,41 @@ const App = () => {
 
         <div className="glass-container">
 
-          <span className="column1">
+          <div className="column1">
             
-            <img alt="NFT Preview" className="card" src={gallery} 
-        /></span>
+            <img alt="NFT Preview" className="card" src={gallery} /><p/>
+
+
+      &#9758; <span id="news">updating status ..</span><br/>
+
+      <text className="statusUpdateText">
+            {statusUpdate}
+          </text>
+
+
+        </div>
 
           <span className="column2">
             
             <p className="header">ThunderLizard <p style={{fontSize:'3.5vw', lineHeight:'0vh'}}>NFT Collection</p></p>
               
+              <text className="sub-text">
+                <p>We connect, educate, and empower the top Web3 builders in the world. </p>
+                Outliers is a 10-week, summer program to empower exceptional student builders in Crypto and Web3.
+                Through curriculum and technical projects, Outliers equips students from across the country with the resources, knowledge, and community necessary 
+                to build and scale a successful Web3 venture. 
+              </text> <br/>
 
-              
-              <div className="sub-text">
-                We connect, educate, and empower the top Web3 builders in the world.
-              </div>
-              
-              {renderNotConnectedContainer()}
+              {currentAccount === "" ? (renderNotConnectedContainer()) : (
+                <button onClick={askContractToMintNft} className="cta-button mint-button">
+                mint nft
+                </button>
 
-              {connectedMint()}
-
+              )}
           
           </span>
 
-          
-
+        
         </div>
 
         <a

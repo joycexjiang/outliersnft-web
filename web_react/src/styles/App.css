@@ -59,19 +59,29 @@
   justify-content: flex;
 }
 
-
 .header {
   margin: 0;
   font-family: "Tupac";
-  font-size: 6vw;
+  font-size: 5vw;
   line-height: 6vh;
+  margin-top: 4vw;
 }
 
 .sub-text {
   font-family: "Inter", sans-serif;
-  margin-top: 7vh;
-  font-size: 1.25vw;
+  margin-top: 5vh;
+  line-height: 2.5vh;
+  font-size: 2vh;
   color: rgb(0, 0, 0);
+}
+
+.statusUpdateText {
+  font-size: 1vw;
+}
+
+#news {
+  font-weight: 800;
+  margin-top: 10vh;
 }
 
 .card {
@@ -114,7 +124,8 @@
   height:3vw;
   border: 0;
   width: auto;
-  margin-top: 6vw;
+  margin-top: 5vh;
+  margin-bottom: 1vh;
   margin-right: 2vw;
   padding-left: 4vw;
   padding-right: 4vw;
