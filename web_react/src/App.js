@@ -179,7 +179,8 @@ const App = () => {
                 </button>
 
               )}
-          
+              <br/><br/>
+              <text><small>⚠️ The Thunderlizard NFT is reserved for Outliers only. ⚠️ </small></text>
           </span>
 
         
