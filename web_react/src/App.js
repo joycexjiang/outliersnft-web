@@ -106,7 +106,7 @@ const App = () => {
         setstatusUpdate("Ethereum object doesn't exist!");
       }
     } catch (error) {
-      setstatusUpdate("There was an error.")
+      setstatusUpdate("there was an error.")
       // setstatusUpdate(error.toString())
       console.log(error())
     }
