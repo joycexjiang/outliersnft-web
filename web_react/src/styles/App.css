@@ -22,7 +22,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  font-family: "Inter", sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-weight: 400;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .sub-text {
-  font-family: "Inter", sans-serif;
+  font-family: "Helvetica", sans-serif;
   margin-top: 5vh;
   line-height: 2.5vh;
   font-size: 2vh;
@@ -96,7 +96,7 @@
 }
 
 .card:hover{
-  transform: scale(1.2, 1.2);
+  transform: scale(1.1, 1.1);
   transition: all .2s ease-in-out;
   cursor: pointer;
 }

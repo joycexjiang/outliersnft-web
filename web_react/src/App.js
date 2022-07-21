@@ -167,7 +167,7 @@ const App = () => {
             <p className="header">ThunderLizard <p style={{fontSize:'3.5vw', lineHeight:'0vh'}}>NFT Collection</p></p>
               
               <text className="sub-text">
-                <p>We connect, educate, and empower the top Web3 builders in the world. </p>
+                <p><b>We connect, educate, and empower the top Web3 builders in the world.</b> </p>
                 Outliers is a 10-week, summer program to empower exceptional student builders in Crypto and Web3.
                 Through curriculum and technical projects, Outliers equips students from across the country with the resources, knowledge, and community necessary 
                 to build and scale a successful Web3 venture. 
