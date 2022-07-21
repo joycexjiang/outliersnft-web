@@ -11,6 +11,7 @@ contract OutliersNFT is ERC721TransferRestricted {
     using Strings for uint256;
 
     bytes32 public constant MINTER_ROLE = keccak256("MINTER");
+
     string public baseURI;
     Counters.Counter private _tokenIdTracker;    
 
@@ -28,6 +29,8 @@ contract OutliersNFT is ERC721TransferRestricted {
     function setBaseURI(string memory _baseURI) external virtual onlyRole(DEFAULT_ADMIN_ROLE) {
         baseURI = _baseURI;
     }
+
+    
 
     function tokenURI(uint256 _tokenId) public view virtual override returns (string memory) {
         require(_exists(_tokenId), "OutliersNFT: URI query for nonexistent token");
