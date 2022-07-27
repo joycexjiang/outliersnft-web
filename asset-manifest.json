@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.0bd0811c.chunk.css",
-    "main.js": "/static/js/main.7e97a8f4.chunk.js",
-    "main.js.map": "/static/js/main.7e97a8f4.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.a1fbfbb9.js",
-    "runtime-main.js.map": "/static/js/runtime-main.a1fbfbb9.js.map",
-    "static/js/2.9bb47b9e.chunk.js": "/static/js/2.9bb47b9e.chunk.js",
-    "static/js/2.9bb47b9e.chunk.js.map": "/static/js/2.9bb47b9e.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.0bd0811c.chunk.css.map": "/static/css/main.0bd0811c.chunk.css.map",
-    "static/js/2.9bb47b9e.chunk.js.LICENSE.txt": "/static/js/2.9bb47b9e.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/static/media/background.ee58e2b8.png",
-    "static/media/gallery.e913760b.gif": "/static/media/gallery.e913760b.gif",
-    "static/media/twitter-logo.a8a75254.svg": "/static/media/twitter-logo.a8a75254.svg"
+    "main.css": "/outliersnft-web/static/css/main.05b756a3.chunk.css",
+    "main.js": "/outliersnft-web/static/js/main.7e97a8f4.chunk.js",
+    "main.js.map": "/outliersnft-web/static/js/main.7e97a8f4.chunk.js.map",
+    "runtime-main.js": "/outliersnft-web/static/js/runtime-main.762b72cb.js",
+    "runtime-main.js.map": "/outliersnft-web/static/js/runtime-main.762b72cb.js.map",
+    "static/js/2.9bb47b9e.chunk.js": "/outliersnft-web/static/js/2.9bb47b9e.chunk.js",
+    "static/js/2.9bb47b9e.chunk.js.map": "/outliersnft-web/static/js/2.9bb47b9e.chunk.js.map",
+    "index.html": "/outliersnft-web/index.html",
+    "static/css/main.05b756a3.chunk.css.map": "/outliersnft-web/static/css/main.05b756a3.chunk.css.map",
+    "static/js/2.9bb47b9e.chunk.js.LICENSE.txt": "/outliersnft-web/static/js/2.9bb47b9e.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/outliersnft-web/static/media/background.ee58e2b8.png",
+    "static/media/gallery.e913760b.gif": "/outliersnft-web/static/media/gallery.e913760b.gif",
+    "static/media/twitter-logo.a8a75254.svg": "/outliersnft-web/static/media/twitter-logo.a8a75254.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a1fbfbb9.js",
+    "static/js/runtime-main.762b72cb.js",
     "static/js/2.9bb47b9e.chunk.js",
-    "static/css/main.0bd0811c.chunk.css",
+    "static/css/main.05b756a3.chunk.css",
     "static/js/main.7e97a8f4.chunk.js"
   ]
 }
