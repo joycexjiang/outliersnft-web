@@ -1,7 +1,7 @@
-# Outliers NFT Minting Web Page - Basic HardHat Project
+# Outliers NFT Minting Web Page & Basic HardHat Project
 
 ## Introduction
-This project is created through the tutorial by [buildspace](https://buildspace.so/projects), demonstrating a basic Hardhat use case. The objective was to create a web page using ReactJS where individuals can connect to their wallet and mint the [Outliers NFT](https://github.com/joycexjiang/floodgate-outliers-nft).
+This project is created through the tutorial by [buildspace](https://buildspace.so/projects), demonstrating a basic Hardhat use case. The objective was to create a web page using ReactJS where individuals can connect to their wallet and mint the [Outliers NFT](https://github.com/joycexjiang/floodgate-outliers-nft). This repository includes the smart contract as well as the web platform.
 
 1. Run `npm install` in web_react folder
 2. Run `npm run start` to start the project
